@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "http://localhost:7165/users/${ID}" \
+curl "https://baseball-database.herokuapp.com/users/${ID}" \
   --include \
   --request GET \
   --header "Authorization: Token token=${TOKEN}"

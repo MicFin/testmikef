@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "http://localhost:7165/change-password" \
+curl "https://baseball-database.herokuapp.com/change-password" \
   --include \
   --request PATCH \
   --header "Authorization: Token token=${TOKEN}" \

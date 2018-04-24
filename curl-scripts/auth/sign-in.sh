@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "http://localhost:7165/sign-in" \
+curl "https://baseball-database.herokuapp.com/sign-in" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \

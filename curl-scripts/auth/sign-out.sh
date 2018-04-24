@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "http://localhost:7165/sign-out" \
+curl "https://baseball-database.herokuapp.com/sign-out" \
   --include \
   --request DELETE \
   --header "Content-Type: application/json" \
