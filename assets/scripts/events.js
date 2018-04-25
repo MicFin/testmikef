@@ -1,6 +1,6 @@
 'use strict'
 const api = require('./api')
-const getFormFields = require('../../../lib/get-form-fields')
+const getFormFields = require('../../lib/get-form-fields')
 const ui = require('./ui')
 
 const onSignUP = function (event) {
