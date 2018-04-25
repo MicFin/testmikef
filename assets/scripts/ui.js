@@ -40,12 +40,32 @@ const signOutFailure = function () {
 }
 
 // Teams ui below
-const createTeamsSuccess = () => {
+const createTeamsSuccess = (data) => {
+  console.log(data)
   $('#message').text('Successfully created team')
   $('#message').css('background-color', 'green')
 }
 const createTeamsFailure = () => {
   $('#message').text('Failure to create team')
+  $('#message').css('background-color', 'red')
+}
+
+const updateTeamsSuccess = (data) => {
+  console.log(data)
+  $('#message').text('Successfully updated team')
+  $('#message').css('background-color', 'green')
+}
+const updateTeamsFailure = () => {
+  $('#message').text('Failure to update team')
+  $('#message').css('background-color', 'red')
+}
+const getTeamsSuccess = (data) => {
+  console.log(data)
+  $('#message').text('Successfully got teams')
+  $('#message').css('background-color', 'green')
+}
+const getTeamsFailure = () => {
+  $('#message').text('Failure to get teams')
   $('#message').css('background-color', 'red')
 }
 
@@ -59,5 +79,9 @@ module.exports = {
   signOutSuccess,
   signOutFailure,
   createTeamsSuccess,
-  createTeamsFailure
+  createTeamsFailure,
+  updateTeamsSuccess,
+  updateTeamsFailure,
+  getTeamsSuccess,
+  getTeamsFailure
 }

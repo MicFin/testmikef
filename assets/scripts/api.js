@@ -57,10 +57,38 @@ const createTeams = function (data) {
     data
   })
 }
+const updateTeams = function (data) {
+  // console.log(data)
+
+  console.log('token is ', store.user.token)
+  return $.ajax({
+    url: config.apiUrl + '/teams/' + data.team.id,
+    method: 'PATCH',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+const getTeams = (data) => {
+  return $.ajax({
+    url: config.apiUrl + '/teams',
+    method: 'GET',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
   signOut,
-  createTeams
+  createTeams,
+  updateTeams,
+  getTeams
 }
