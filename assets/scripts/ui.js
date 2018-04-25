@@ -1,5 +1,7 @@
 'use strict'
 const store = require('./store')
+
+// Auth Ui below
 const signUpSuccess = function () {
   $('#message').text('Successfully signed up')
   $('#message').css('background-color', 'green')
@@ -37,6 +39,16 @@ const signOutFailure = function () {
   $('#message').css('background-color', 'red')
 }
 
+// Teams ui below
+const createTeamsSuccess = () => {
+  $('#message').text('Successfully created team')
+  $('#message').css('background-color', 'green')
+}
+const createTeamsFailure = () => {
+  $('#message').text('Failure to create team')
+  $('#message').css('background-color', 'red')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -45,5 +57,7 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  createTeamsSuccess,
+  createTeamsFailure
 }

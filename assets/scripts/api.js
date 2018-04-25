@@ -2,6 +2,7 @@
 const config = require('./config')
 const store = require('./store')
 
+// Auth functions below
 const signUp = function (data) {
   return $.ajax({
     url: config.apiUrl + '/sign-up',
@@ -43,9 +44,23 @@ const signOut = function () {
     }
   })
 }
+
+// Team functions below
+const createTeams = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/teams',
+    method: 'POST',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
 module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut
+  signOut,
+  createTeams
 }

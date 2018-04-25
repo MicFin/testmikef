@@ -33,11 +33,22 @@ const onSignOut = function () {
     .catch(ui.signOutFailure)
 }
 
+// Teams functions below here:
+const onCreateTeams = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  console.log(data)
+  api.createTeams(data)
+    .then(ui.createTeamsSuccess)
+    .catch(ui.createTeamsFailure)
+}
+
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUP)
   $('#sign-in').on('submit', onSignIn)
   $('#change-password').on('submit', onChangePassword)
   $('#sign-out').on('submit', onSignOut)
+  $('#create-teams').on('submit', onCreateTeams)
 }
 
 module.exports = {
