@@ -68,6 +68,14 @@ const getTeamsFailure = () => {
   $('#message').text('Failure to get teams')
   $('#message').css('background-color', 'red')
 }
+const destroyTeamSuccess = (data) => {
+  $('#message').text('Successfully deleted team')
+  $('#message').css('background-color', 'green')
+}
+const destroyTeamFailure = () => {
+  $('#message').text('Failure to delete team')
+  $('#message').css('background-color', 'red')
+}
 
 module.exports = {
   signUpSuccess,
@@ -83,5 +91,7 @@ module.exports = {
   updateTeamsSuccess,
   updateTeamsFailure,
   getTeamsSuccess,
-  getTeamsFailure
+  getTeamsFailure,
+  destroyTeamSuccess,
+  destroyTeamFailure
 }

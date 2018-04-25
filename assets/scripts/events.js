@@ -56,6 +56,13 @@ const onGetTeams = (event) => {
     .then(ui.getTeamsSuccess)
     .catch(ui.getTeamsFailure)
 }
+const onDestroyTeam = (event) => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.destroyTeam(data)
+    .then(ui.destroyTeamSuccess)
+    .catch(ui.destroyTeamFailure)
+}
 
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUP)
@@ -65,6 +72,7 @@ const addHandlers = () => {
   $('#create-teams').on('submit', onCreateTeams)
   $('#update-teams').on('submit', onUpdateTeams)
   $('#get-teams').on('submit', onGetTeams)
+  $('#destroy-team').on('submit', onDestroyTeam)
 }
 
 module.exports = {
