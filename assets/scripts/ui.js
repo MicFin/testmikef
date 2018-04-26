@@ -97,7 +97,7 @@ const getTeamsSuccess = (data) => {
   for (let i = 0; i < data.teams.length; i++) {
     const teamName = data.teams[i].team_name
     const teamId = data.teams[i].id
-    $('#team-list').append('Team ID: ', teamId, ', Team Name: ', teamName, '...')
+    $('#team-list').append('Team Id ', teamId, ' - ', teamName, '...')
   }
   $('#team-list').css('color', 'black')
   $('#team-list').css('background', 'rgb(199,199,199)')
