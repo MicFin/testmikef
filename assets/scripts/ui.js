@@ -57,7 +57,9 @@ const signOutSuccess = function (data) {
   $('#get-teams').css('display', 'none')
   $('#destroy-team').css('display', 'none')
   $('#team-forms').css('display', 'none')
-  $('#team-list').css('display', 'none')
+  $('#team-list').text('')
+  $('#message2').text('')
+  $('#message2').css('background', 'none')
   store.user = null
 }
 const signOutFailure = function () {
@@ -88,9 +90,14 @@ const updateTeamsFailure = () => {
   $('#update-teams').trigger('reset')
 }
 const getTeamsSuccess = (data) => {
+  console.log(data)
+  $('#team-list').text('')
+  $('#message2').text('')
+  $('#message2').css('background', 'none')
   for (let i = 0; i < data.teams.length; i++) {
     const teamName = data.teams[i].team_name
-    $('#team-list').append(teamName, '  ')
+    const teamId = data.teams[i].id
+    $('#team-list').append('Team ID: ', teamId, ', Team Name: ', teamName, '...')
   }
   $('#team-list').css('color', 'black')
   $('#team-list').css('background', 'rgb(199,199,199)')
