@@ -2,11 +2,39 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
 form {
-  font-size: 18px
-
+  font-size: 18px;
 }
+
+#change-password {
+  display: none;
+}
+
+#sign-out {
+  display: none;
+}
+
+#create-teams {
+  display: none;
+}
+
+#update-teams {
+  display: none;
+}
+
+#get-teams {
+  display: none;
+}
+
+#destroy-team {
+  display: none;
+}
+
+#team-forms {
+  display: none;
+}
+
 h1 {
-  font-size: 28px
+  font-size: 28px;
 }
 
 .border {
