@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Mike's Database</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <h1>Baseball Client</h1>
+      <div id="message"></div>
+  <form id="sign-up" class="border visible-on-start">
+    <fieldset>
+      <legend>Sign up!</legend>
+      <input type="email" name="credentials[email]" placeholder="Email">
+      <input type="password" name="credentials[password]" placeholder="Password">
+      <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+      <input type="submit" value="Sign up!">
+    </fieldset>
+  </form>
+  <br>
+
+  <form id="sign-in" class="border">
+    <fieldset>
+      <legend>Sign in!</legend>
+      <input type="email" name="credentials[email]" placeholder="Email">
+      <input type="password" name="credentials[password]" placeholder="Password">
+      <input type="submit" value="Sign in!">
+    </fieldset>
+  </form>
+  <br>
+
+  <form id="change-password" class="border">
+    <fieldset>
+      <legend>Change password!</legend>
+      <input type="password" name="passwords[old]" placeholder="Old Password">
+      <input type="password" name="passwords[new]" placeholder="New Password">
+      <input type="submit" value="Change password!">
+    </fieldset>
+  </form>
+  <br>
+
+  <form id="sign-out" class="border">
+    <fieldset>
+      <legend>Sign out!</legend>
+      <input type="submit" value="Sign out!">
+    </fieldset>
+  </form>
+  <br>
+
+  <div id="team-forms" class='team-forms'>Team forms below here:</div>
+
+  <form id="create-teams" class="border">
+    <fieldset>
+      <legend>Create Teams!</legend>
+      <input type="text" name="team[team_name]" placeholder="Team Name">
+      <input type="submit" value="Create Teams!">
+    </fieldset>
+  </form>
+  <br>
+
+  <form id="update-teams" class="border">
+    <fieldset>
+      <legend>Update Team!</legend>
+       <input type="text" name="team[id]" placeholder="Team ID">
+      <input type="text" name="team[team_name]" placeholder="Team Name">
+      <input type="submit" value="Update Team!">
+    </fieldset>
+  </form>
+  <br>
+
+<div id="message2"></div>
+
+  <form id="get-teams" class="border">
+    <fieldset>
+      <legend>Get Teams!</legend>
+      <input type="submit" value="Get Teams!">
+    </fieldset>
+  </form>
+  <br>
+
+<div id="team-list" class="team-list"></div>
+
+  <form id="destroy-team" class="border">
+    <fieldset>
+      <legend>Delete Team!</legend>
+      <input type="text" name="team[id]" placeholder="Team ID">
+      <input type="submit" value="Delete Team!">
+    </fieldset>
+  </form>
+  <br>
+    </body>
+</html>
