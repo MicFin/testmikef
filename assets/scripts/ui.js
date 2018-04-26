@@ -57,6 +57,7 @@ const signOutSuccess = function (data) {
   $('#get-teams').css('display', 'none')
   $('#destroy-team').css('display', 'none')
   $('#team-forms').css('display', 'none')
+  $('#team-list').css('display', 'none')
   store.user = null
 }
 const signOutFailure = function () {
@@ -87,13 +88,19 @@ const updateTeamsFailure = () => {
   $('#update-teams').trigger('reset')
 }
 const getTeamsSuccess = (data) => {
-  console.log(data)
-  $('#message').text('Successfully got teams')
-  $('#message').css('background-color', 'green')
+  for (let i = 0; i < data.teams.length; i++) {
+    const teamName = data.teams[i].team_name
+    $('#team-list').append(teamName, ' , ')
+  }
+  $('#team-list').css('color', 'black')
+  $('#team-list').css('background', 'rgb(199,199,199)')
+  $('#message2').css('display', 'block')
+  $('#message2').text('Successfully got teams')
+  $('#message2').css('background-color', 'green')
 }
 const getTeamsFailure = () => {
-  $('#message').text('Failure to get teams')
-  $('#message').css('background-color', 'red')
+  $('#message2').text('Failure to get teams')
+  $('#message2').css('background-color', 'red')
 }
 const destroyTeamSuccess = (data) => {
   $('#message').text('Successfully deleted team')
