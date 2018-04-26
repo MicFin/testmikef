@@ -90,13 +90,14 @@ const updateTeamsFailure = () => {
 const getTeamsSuccess = (data) => {
   for (let i = 0; i < data.teams.length; i++) {
     const teamName = data.teams[i].team_name
-    $('#team-list').append(teamName, ' , ')
+    $('#team-list').append(teamName, '  ')
   }
   $('#team-list').css('color', 'black')
   $('#team-list').css('background', 'rgb(199,199,199)')
   $('#message2').css('display', 'block')
   $('#message2').text('Successfully got teams')
   $('#message2').css('background-color', 'green')
+  $('#team-list').css('display', 'block')
 }
 const getTeamsFailure = () => {
   $('#message2').text('Failure to get teams')
